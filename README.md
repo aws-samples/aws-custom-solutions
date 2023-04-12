@@ -2,9 +2,9 @@
 
 This examplea are aimed to guide customer on how implmenet ECS with CDK. 
 
-1. ECSwithCDK
+1. [ECSwithCDK](https://github.com/aws-samples/amazon-ecs-cdk-examples/tree/main/ECSwithCDK)
 
-2. NestedCDK
+2. [NestedCDK](https://github.com/aws-samples/amazon-ecs-cdk-examples/tree/main/NestedCDK)
 
 ## Security
 
