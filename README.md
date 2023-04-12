@@ -2,9 +2,9 @@
 
 This examplea are aimed to guide customer on how implmenet ECS with CDK. 
 
-1. [ECSwithCDK] [Introduction to SageMaker Feature Store](https://github.com/aws-samples/amazon-ecs-cdk-examples/tree/main/ECSwithCDK)
+1. [ECSwithCDK](https://github.com/aws-samples/amazon-ecs-cdk-examples/tree/main/ECSwithCDK)
 
-2. [NestedCDK] [Introduction to SageMaker Feature Store](https://github.com/aws-samples/amazon-ecs-cdk-examples/tree/main/NestedCDK)
+2. [NestedCDK](https://github.com/aws-samples/amazon-ecs-cdk-examples/tree/main/NestedCDK)
 
 ## Security
 
