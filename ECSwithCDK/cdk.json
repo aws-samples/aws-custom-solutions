@@ -1,5 +1,5 @@
 {
-  "app": "npx ts-node --prefer-ts-exts bin/marco_project_cdk_part.ts",
+  "app": "npx ts-node --prefer-ts-exts bin/ecs_with_cdk.ts",
   "watch": {
     "include": [
       "**"

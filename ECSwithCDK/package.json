@@ -1,8 +1,8 @@
 {
-  "name": "marco_project_cdk_part",
+  "name": "ec_swith_cdk",
   "version": "0.1.0",
   "bin": {
-    "marco_project_cdk_part": "bin/marco_project_cdk_part.js"
+    "ec_swith_cdk": "bin/ec_swith_cdk.js"
   },
   "scripts": {
     "build": "tsc",
