@@ -1,14 +1,12 @@
-# Welcome to your CDK TypeScript project
+# CDK Code for ECS with single service and mutliple load balancer
 
-This is a blank project for CDK development with TypeScript.
+This is how one can use one public load balancer and one internal load balancer along with assigning one ECS service to the 2 target groups(public and private) which at the end are linked to the two load balancer.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
-## Useful commands
+## How to deploy:
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+* Open 'bin/marco_project_cdk_part.ts' and edit the account id and the region you want to deploy the resources to.
+
+* Run 'cdk synth'
+
+* Run `cdk deploy`
