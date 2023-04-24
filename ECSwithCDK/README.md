@@ -35,7 +35,7 @@ By using the code below, one will be able to create the folowing resources.
 
 - Please note, the above diagram is the best practice, and is suggested by AWS to be followed, but the CDK code given in this project doesn't include a Route 53 Public/Private Hosted Zone for the DNS configuration and is a feature request for now.
 
-- To implement the same, one can refer the [documentation](https://aws.amazon.com/blogs/containers/how-to-use-multiple-load-balancer-target-group-support-for-amazon-ecs-to-access-internal-and-external-service-endpoint-using-the-same-dns-name/)
+- For more details, please refer the [AWS Documentation](https://aws.amazon.com/blogs/containers/how-to-use-multiple-load-balancer-target-group-support-for-amazon-ecs-to-access-internal-and-external-service-endpoint-using-the-same-dns-name/).
 
 ## How to deploy:
 
