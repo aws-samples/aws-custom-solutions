@@ -1,6 +1,6 @@
 ## CDK EXAMPLES 
 
-This example are aimed to guide customer on how implement ECS with CDK.
+This example is aimed to guide customer on how implement ECS with CDK.
 
 1. [ECSwithCDK](https://github.com/aws-samples/amazon-ecs-cdk-examples/tree/main/ECSwithCDK)
 

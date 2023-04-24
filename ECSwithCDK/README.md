@@ -8,9 +8,9 @@ By using the code below, one will be able to create the folowing resources.
 
 - [VPC](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_ec2.Vpc.html)
 
-- 2 [Security Groups](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_ec2.SecurityGroup.html) (one for internal and one for external)
+- 2 [Security Groups](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_ec2.SecurityGroup.html) (one each for internal and external load balancer)
 
-- 2 [Load Balancers](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_elasticloadbalancingv2.ApplicationLoadBalancer.html) (one each for internal and external)
+- 2 [Load Balancers](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_elasticloadbalancingv2.ApplicationLoadBalancer.html) (one each for internal and external traffic)
 
 - 2 [Target Groups](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_elasticloadbalancingv2.ApplicationTargetGroup.html) (one each for internal and external Load Balancer)
 
