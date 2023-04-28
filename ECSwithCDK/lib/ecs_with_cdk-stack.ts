@@ -11,9 +11,8 @@ import * as custom_resource from 'aws-cdk-lib/custom-resources'
 import * as elbv2 from 'aws-cdk-lib/aws-elasticloadbalancingv2'
 import { IpTarget } from 'aws-cdk-lib/aws-elasticloadbalancingv2-targets';
 
-// import * as sqs from 'aws-cdk-lib/aws-sqs';
 
-export class MarcoProjectCdkPartStack extends cdk.Stack {
+export class EcSwithCdkStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
@@ -124,8 +123,16 @@ export class MarcoProjectCdkPartStack extends cdk.Stack {
       containerPort: 80,
     })
     
-    
-    // Creating a service using Custom resource, as adding a service to multiple target groups is not supported natively by CDK, only SDK/CLI supports the same
+    const serviceName = 'fargate-service'
+
+    const subnets = vpc.privateSubnets
+
+    const subnet1 = subnets[0].subnetId
+
+    const subnet2 = subnets[1].subnetId
+
+    const subnet3 = subnets[2].subnetId
+
     const params = {
         taskDefinition: fargateTaskDefinition.taskDefinitionArn,
         loadBalancers:[
@@ -143,11 +150,11 @@ export class MarcoProjectCdkPartStack extends cdk.Stack {
        networkConfiguration: { 
         "awsvpcConfiguration": { 
            "securityGroups":  [sg2.securityGroupId] ,
-           "subnets": ["subnet-01e56d13d9324a189", "subnet-0a293c0c55569ebd2","subnet-05b28d7db564d658f"]
+           "subnets": [subnet1, subnet2, subnet3]
         }
      },
        cluster: cluster.clusterArn,
-       serviceName: 'fargate-service',
+       serviceName: serviceName,
        desiredCount: 0,
        launchType: 'FARGATE'
     }
@@ -163,10 +170,22 @@ export class MarcoProjectCdkPartStack extends cdk.Stack {
           parameters: params,
           physicalResourceId: custom_resource.PhysicalResourceId.of(Date.toString())
         },
+        onDelete: {
+          service: 'ECS',
+          action: 'deleteService',
+          parameters: {
+            cluster: cluster.clusterArn,
+            service: serviceName
+          }
+
+        },
         policy: custom_resource.AwsCustomResourcePolicy.fromStatements(
           [policyStatement]
         )
       }
      )
+
+    createService.node.addDependency(vpc, sg1, sg2, private_lb, public_lb, private_listener, public_listener, private_tg, public_tg, cluster, fargateTaskDefinition, container)
+
   }
 }
