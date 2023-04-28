@@ -2,7 +2,7 @@
 
 The repository is being made to help you through different architectures using CDK. The Repository currently has an example related to ECS implemtation in CDK.
 
-This example is aimed to guide customer on how implement one ECS Service which is a target of two load balancers the help of CDK.
+This example is aimed to guide customer on how implement one ECS Service which is a target of two load balancers with the help of CDK.
 
 For more information, please look at the following:
 
