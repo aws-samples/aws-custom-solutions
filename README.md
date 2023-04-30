@@ -1,6 +1,6 @@
-## CDK EXAMPLES 
+## Customized Customer Solutions 
 
-The repository is aimed to share customized solutions using CDK. 
+The repository is aimed to help customer build customized solutions. 
 
 This respository consists of following modules:
 1. [ECSwithCDK](https://github.com/aws-samples/amazon-ecs-cdk-examples/tree/main/ECSwithCDK)
