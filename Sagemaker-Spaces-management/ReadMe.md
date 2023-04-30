@@ -1,4 +1,4 @@
-# Streamlining ML and DS development with Amazon SageMaker spaces
+# Streamlining Machine learning and Data Science development with Amazon SageMaker spaces
 
 Amazon SageMaker Spaces is a feature that allows users to collaborate on machine learning projects in a secure and isolated environment. With SageMaker Spaces, users can create shared workspaces where they can share notebooks, files, experiments, and models with other users. Users can also control access to these resources, so they can be sure that their data is safe.
 
